@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SideBar</title>
+    <link rel="stylesheet" href="sidebar.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Outfit:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Mobile button -->
+    <button class="menu-btn" onclick="toggleMobile()">☰</button>
+
+    <!-- Overlay -->
+    <div class="overlay" onclick="toggleMobile()"></div>
+
+    <main>
+      <aside class="sidebar">
+        <!-- Logo -->
+        <div class="logo">
+          <img src="img/logo-icon.png" alt="" />
+          <img src="img/Brand-name.png" class="brand-name" alt="" />
+
+          <button class="collapse-btn" onclick="toggleSidebar()">‹</button>
+        </div>
+
+        <!-- Navigation -->
+        <nav>
+          <a href="#" class="active">
+            <i class="fa-solid fa-house"></i>
+            <label>Dashboard</label>
+          </a>
+
+          <a href="#">
+            <i class="fa-solid fa-dumbbell"></i>
+            <label>My Workouts</label>
+          </a>
+
+          <a href="#">
+            <i class="fa-solid fa-list"></i>
+            <label>Workout Plans</label>
+          </a>
+
+          <a href="#">
+            <i class="fa-solid fa-arrow-trend-up"></i>
+            <label>Progress</label>
+          </a>
+
+          <a href="#">
+            <i class="fa-solid fa-arrow-trend-up"></i>
+            <label>Live Tracking</label>
+          </a>
+
+          <a href="#">
+            <i class="fa-regular fa-calendar"></i>
+            <label>Classes</label>
+          </a>
+
+          <a href="#">
+            <i class="fa-solid fa-user-group"></i>
+            <label>Trainers</label>
+          </a>
+
+          <a href="#">
+            <i class="fa-solid fa-apple-whole"></i>
+            <label>Nutrition</label>
+          </a>
+          <a href="#">
+            <i class="fa-regular fa-credit-card"></i>
+            <label>Membership</label>
+          </a>
+          <a href="#">
+            <i class="fa-solid fa-credit-card"></i>
+            <label>Payments</label>
+          </a>
+          <a href="#">
+            <i class="fa-solid fa-bell"></i>
+            <label>Notification</label>
+          </a>
+          <a href="#">
+            <i class="fa-solid fa-user"></i>
+            <label>Profile</label>
+          </a>
+          <a href="#">
+            <i class="fa-solid fa-gear"></i>
+            <label>Setting</label>
+          </a>
+        </nav>
+
+        <!-- User -->
+        <div class="user">
+          <div class="avatar">S</div>
+
+          <div class="user-info">
+            <strong>Sarah</strong>
+            <small>Pro Member</small>
+          </div>
+
+          <a href="" class="logout"
+            ><i class="fa-solid fa-right-from-bracket"></i
+          ></a>
+        </div>
+      </aside>
+      
+      <div class="content"><h1>Hello World</h1></div>
+    </main>
+    <script>
+      function toggleSidebar() {
+        document.querySelector(".sidebar").classList.toggle("collapsed");
+      }
+
+      function toggleMobile() {
+        document.querySelector(".sidebar").classList.toggle("mobile-open");
+        document.querySelector(".overlay").classList.toggle("show");
+      }
+    </script>
+  </body>
+</html>
